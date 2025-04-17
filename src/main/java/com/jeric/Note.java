@@ -1,3 +1,5 @@
+package com.jeric;
+
 public class Note
 {
 //Might need to abstract this.
