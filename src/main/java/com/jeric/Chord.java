@@ -4,14 +4,12 @@ import java.util.ArrayList;
 
 public abstract class Chord 
 {
-	private String name;
-	private Note root;
-	public Chord(String name,Note root)
+	protected Note root;
+	public Chord(Note root)
 	{
-		this.name = name;
 		this.root = root;
 	}
 
-	public abstract ArrayList<Note> calculateChord(Note root);
+	public abstract ArrayList<Note> getNotesInChord();
 
 }
