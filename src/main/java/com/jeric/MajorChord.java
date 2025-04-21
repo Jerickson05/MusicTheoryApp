@@ -5,9 +5,8 @@ public class MajorChord extends Chord
 {
 
     private ArrayList<Note> majChord;
-    private Note third;
-    private Note fifth;
-    private String[] NOTE_SEQ = {"A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#"};
+    private Note majThird;
+    private Note perfFifth;
 
     public MajorChord(Note root) {
         super(root);
@@ -22,23 +21,14 @@ public class MajorChord extends Chord
         {
             throw new IllegalArgumentException("Not a valid Root Note.");
         }
-        third = new Note(NOTE_SEQ[(rootidx + 4) % 12]); 
-        fifth = new Note(NOTE_SEQ[(rootidx + 7) % 12]);
+        majThird = new Note(NOTE_SEQ[(rootidx + 4) % 12]); 
+        perfFifth = new Note(NOTE_SEQ[(rootidx + 7) % 12]);
 
         majChord.add(root);
-        majChord.add(third);
-        majChord.add(fifth);
+        majChord.add(majThird);
+        majChord.add(perfFifth);
         return majChord;
     }
 
-    private int findNoteIndex(String note)
-    {
-        for (int i = 0; i < NOTE_SEQ.length; i++) 
-        {
-            if (NOTE_SEQ[i].equals(note))
-            {return i;}
-        }
-        return -1; //In the event the note isn't in the list, to be filtered in the getNotes method
-    }
-    
+
 }
