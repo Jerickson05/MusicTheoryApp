@@ -9,9 +9,16 @@ import java.io.IOException;
 public class App extends Application {
 
     private static Scene scene;
+    private Chord cMaj = new MajorChord(new Note("C"));
 
     @Override
     public void start(Stage stage) throws IOException {
+
+        for (Note n : cMaj.getNotesInChord())
+        {
+            System.out.println(n.getName());
+        }
+
         stage.setScene(scene);
         stage.show();
     }
