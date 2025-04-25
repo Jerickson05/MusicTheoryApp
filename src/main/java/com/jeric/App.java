@@ -19,6 +19,7 @@ public class App extends Application {
         {
             System.out.println(n.getName());
         }
+        System.out.println("");
         for (Note n : aMin.getNotesInChord())
         {
             System.out.println(n.getName());
