@@ -36,6 +36,7 @@ public class App extends Application {
         {
             System.out.print(n.getName() + " ");
         }
+        System.out.println("");
     
 
         stage.setScene(scene);
