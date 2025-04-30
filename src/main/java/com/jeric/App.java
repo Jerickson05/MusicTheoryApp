@@ -45,9 +45,7 @@ public class App extends Application implements IContract.View {
         stage.setScene(scene);
         stage.show();
     }
-    public static void main(String[] args) {
-        launch();
-    }
+    public static void main(String[] args) { launch(); }
         
     public void scaleButtonPressed(ActionEvent e) 
     {
