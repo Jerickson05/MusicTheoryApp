@@ -12,7 +12,7 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-//Global TODO: Add JavaDoc
+//TODO: Add JavaDoc
 //TODO: make unit tests
 public class App extends Application implements IContract.View {
 
