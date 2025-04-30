@@ -11,8 +11,6 @@ public interface IContract
     }
     interface View
     {
-        //void updateChordOutput(String c);
-        //void updateScaleOutput(String s);
         void updateOutput(String out);
     }
     

@@ -21,7 +21,6 @@ public class Presenter implements IContract.Presenter
         {
             chordOutput.append(note.getName() + " ");
         }
-        //view.updateChordOutput(chordOutput.toString());
         view.updateOutput(chordOutput.toString());
     }
 
@@ -33,7 +32,6 @@ public class Presenter implements IContract.Presenter
         {
             scaleOutput.append(note.getName() + " ");
         }
-        //view.updateScaleOutput(scaleOutput.toString());
         view.updateOutput(scaleOutput.toString());
     }
 

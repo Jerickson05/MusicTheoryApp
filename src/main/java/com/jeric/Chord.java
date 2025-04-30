@@ -14,7 +14,6 @@ public abstract class Chord
 
 	public abstract ArrayList<Note> getNotesInChord();
 
-
 	protected int findNoteIndex(String note)
     {
         for (int i = 0; i < NOTE_SEQ.length; i++) 

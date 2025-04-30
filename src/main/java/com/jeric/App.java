@@ -15,18 +15,11 @@ import java.io.IOException;
 
 public class App extends Application implements IContract.View {
 
-    //private static Scene scene;
-    //private Chord cMaj = new MajorChord(new Note("C"));
-    //private Chord aMin = new MinorChord(new Note("A"));
-    //private Scale cMajScale = new MajorScale(new Note("C"));
-    //private Scale aMinScale = new MinorScale(new Note("A"));
     private TextField tf_rootNote;
     private TextField tf_type;
     private Label lbl_output;
     IContract.Presenter myPresenter;
     
-
-
     @Override
     public void start(Stage stage) throws IOException {
         myPresenter = new Presenter(this);
@@ -41,78 +34,34 @@ public class App extends Application implements IContract.View {
         scaleButton.setOnAction(this::scaleButtonPressed);
         lbl_output = new Label("");
 
-        
-
         VBox vbox = new VBox(20);
         vbox.setPadding(new Insets(20, 30, 30, 20));
         HBox hbox = new HBox();
         hbox.getChildren().addAll(chordButton, scaleButton);
         vbox.getChildren().addAll(tf_rootNote, tf_type, hbox, lbl_output);
 
-    
     Scene scene = new Scene(vbox);
         stage.setScene(scene);
         stage.show();
     }
-
-
-
     public static void main(String[] args) {
         launch();
     }
-
-    /*  Return to start to do further testing,
-        moved here to keep area clean for GUI code.
-    for (Note n : cMaj.getNotesInChord())
+        
+    public void scaleButtonPressed(ActionEvent e) 
     {
-        System.out.print(n.getName() + " ");
+        myPresenter.createScale(tf_rootNote.getText(), tf_type.getText());
     }
-    System.out.println("");
-    for (Note n : aMin.getNotesInChord())
+
+    public void chordButtonPressed(ActionEvent e) 
     {
-        System.out.print(n.getName() + " ");
+        myPresenter.createChord(tf_rootNote.getText(), tf_type.getText());
     }
-    System.out.println("");
-    for (Note n : cMajScale.getNotesInScale())
+
+    @Override
+    public void updateOutput(String out)
     {
-        System.out.print(n.getName() + " ");
+        lbl_output.setText(out);
     }
-    System.out.println("");
-    for (Note n : aMinScale.getNotesInScale())
-    {
-        System.out.print(n.getName() + " ");
-    }
-    System.out.println("");
-    */
-    //TODO: Define these.
-public void scaleButtonPressed(ActionEvent e) 
-{
-    myPresenter.createScale(tf_rootNote.getText(), tf_type.getText());
-}
-public void chordButtonPressed(ActionEvent e) 
-{
-    myPresenter.createChord(tf_rootNote.getText(), tf_type.getText());
-}
-
-
-@Override
-public void updateOutput(String out)
-{
-    lbl_output.setText(out);
-}
-
-// @Override
-// public void updateChordOutput(String c) 
-// {
-//     lbl_output.setText(c);
-// }
-
-
-
-// @Override
-// public void updateScaleOutput(String s) 
-// {
-    
-// }
 
 }

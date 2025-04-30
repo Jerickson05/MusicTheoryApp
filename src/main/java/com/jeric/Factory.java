@@ -16,7 +16,7 @@ public class Factory
             scale = new MajorScale(new Note(s));
             break;
             default:
-            new Error("Not a valid scale type"); 
+            new Error("Not a valid scale type"); //figure out what error would be best here
             };
         return scale;
     }
@@ -31,7 +31,7 @@ public class Factory
             chord = new MajorChord(new Note(c));
             break;
             default:
-            new Error("Not a valid chord type"); 
+            new Error("Not a valid chord type"); //Figure out what error would be best here
             };
         return chord;
     }
