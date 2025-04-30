@@ -37,7 +37,7 @@ public class App extends Application implements IContract.View {
         tf_type.setPromptText("Enter scale/chord type.");
         Button chordButton = new Button("Create Chord");
         chordButton.setOnAction(this::chordButtonPressed);
-        Button scaleButton = new Button("Create Scale.");
+        Button scaleButton = new Button("Create Scale");
         scaleButton.setOnAction(this::scaleButtonPressed);
         lbl_output = new Label("");
 
