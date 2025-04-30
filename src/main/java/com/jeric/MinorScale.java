@@ -39,5 +39,10 @@ public class MinorScale extends Scale {
         minScale.add(octave);
         return minScale;
     }
-    
+
+    @Override
+    public String getType()
+    {
+        return "Minor";
+    }
 }
