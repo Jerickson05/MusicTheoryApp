@@ -13,7 +13,6 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 //TODO: Add JavaDoc
-//TODO: make unit tests
 public class App extends Application implements IContract.View {
 
     private TextField tf_rootNote;

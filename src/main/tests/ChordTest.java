@@ -30,4 +30,28 @@ public class ChordTest
         assertEquals(testChord.toString(), expectedChord.toString());
 
     }
+
+    @Test
+    public void checkMinChord()
+    {
+        ArrayList<Note> notes = new ArrayList<>();
+        Note a, c, e;
+        a = new Note("A");
+        c = new Note("C");
+        e = new Note("E");
+        notes.add(a);
+        notes.add(c);
+        notes.add(e);
+        Chord aMin = new MinorChord(new Note("A"));
+        StringBuilder testChord = new StringBuilder();
+        StringBuilder expectedChord = new StringBuilder();
+
+        for (Note n : aMin.getNotesInChord())
+        { testChord.append(n.getName() + " "); }
+        for ( Note n : notes)
+        { expectedChord.append(n.getName() + " "); }
+
+        assertEquals(testChord.toString(), expectedChord.toString());
+
+    }
 }
