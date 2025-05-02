@@ -39,11 +39,5 @@ public class MajorScale extends Scale {
         majScale.add(majSeventh);
         majScale.add(octave);
         return majScale;
-    }
-    @Override
-    public String getType()
-    {
-        return "Major";
-    }
-    
+    }    
 }

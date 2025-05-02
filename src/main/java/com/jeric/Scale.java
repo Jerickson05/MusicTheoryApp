@@ -23,7 +23,6 @@ protected int findNoteIndex(String note)
 	}
 	return -1; //In the event the note isn't in the list, to be filtered in the getNotes method
 }
-public abstract String getType();
 }
 
 

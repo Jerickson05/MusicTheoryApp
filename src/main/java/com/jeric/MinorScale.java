@@ -40,9 +40,5 @@ public class MinorScale extends Scale {
         return minScale;
     }
 
-    @Override
-    public String getType()
-    {
-        return "Minor";
-    }
+
 }
