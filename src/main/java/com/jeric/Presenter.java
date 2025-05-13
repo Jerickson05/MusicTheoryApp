@@ -36,6 +36,4 @@ public class Presenter implements IContract.Presenter
         }
         view.updateOutput(scaleOutput.toString());
     }
-
-    
 }

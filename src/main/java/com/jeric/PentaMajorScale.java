@@ -20,5 +20,4 @@ private ArrayList<Note> pentaMajScale;
         pentaMajScale.add(getOctave());
         return pentaMajScale;
     }
-    
 }

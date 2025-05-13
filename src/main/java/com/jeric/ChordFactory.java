@@ -18,5 +18,4 @@ public class ChordFactory {
             };
         return chord;
     }
-
 }

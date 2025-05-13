@@ -6,7 +6,6 @@ public class MinorChord extends Chord
 {
     private ArrayList<Note> minChord;
 
-
     public MinorChord(Note rootNote) {
         super(rootNote);
         minChord = new ArrayList<>();

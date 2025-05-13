@@ -19,6 +19,5 @@ private ArrayList<Note> pentaMinScale;
        pentaMinScale.add(getMin7());
        pentaMinScale.add(getOctave());
        return pentaMinScale;
-    }
-    
+    } 
 }

@@ -23,6 +23,4 @@ public class MinorScale extends Scale {
         minScale.add(getOctave());
         return minScale;
     }
-
-
 }

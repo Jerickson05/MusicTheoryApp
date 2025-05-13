@@ -21,5 +21,4 @@ public class PentatonicScaleFactory extends ScaleFactory
         };
         return scale;
     }
-    
 }

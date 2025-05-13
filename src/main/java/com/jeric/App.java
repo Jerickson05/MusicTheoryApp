@@ -10,8 +10,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-
 import java.io.IOException;
+
 //TODO: Add JavaDoc
 public class App extends Application implements IContract.View {
 
@@ -61,5 +61,4 @@ public class App extends Application implements IContract.View {
     {
         lbl_output.setText(out);
     }
-
 }

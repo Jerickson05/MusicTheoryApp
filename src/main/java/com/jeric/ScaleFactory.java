@@ -19,6 +19,4 @@ public class ScaleFactory
             };
         return scale;
     }
-
-    
 }

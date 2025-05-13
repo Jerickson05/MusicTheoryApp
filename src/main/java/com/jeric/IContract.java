@@ -3,7 +3,6 @@ package com.jeric;
 public interface IContract 
 
 {
-
     interface Presenter
     {
         void createChord(String n, String t);
@@ -13,5 +12,5 @@ public interface IContract
     {
         void updateOutput(String out);
     }
-    
+
 }

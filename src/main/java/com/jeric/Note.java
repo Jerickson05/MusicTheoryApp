@@ -11,6 +11,4 @@ public Note(String n)
 
 public String getName() { return note; }
 
-
-
 }

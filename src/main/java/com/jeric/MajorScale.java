@@ -5,7 +5,6 @@ import java.util.ArrayList;
 public class MajorScale extends Scale {
     private ArrayList<Note> majScale;
 
-
     public MajorScale(Note rootNote) {
         super(rootNote);
         majScale = new ArrayList<>();

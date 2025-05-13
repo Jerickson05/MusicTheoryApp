@@ -13,10 +13,10 @@ public abstract class Chord
 	public Chord(Note rootNote)
 	{
 
-        if(findNoteIndex(rootNote.getName()) != -1)
+        if (findNoteIndex(rootNote.getName()) != -1)
             {
             //Maj, Min, and Perfect intervals                             Semitones from root
-            root = new Note(rootNote.getName());                             // 0
+            root = new Note(rootNote.getName());                                    // 0
             m2 = new Note(NOTE_SEQ[(findNoteIndex(root.getName()) + 1) % 12]);      // 1
             M2 = new Note(NOTE_SEQ[(findNoteIndex(root.getName()) + 2) % 12]);      // 2
             m3 = new Note(NOTE_SEQ[(findNoteIndex(root.getName()) + 3) % 12]);      // 3
@@ -29,7 +29,7 @@ public abstract class Chord
             M7 = new Note(NOTE_SEQ[(findNoteIndex(root.getName()) + 11) % 12]);     // 11
             Octave = new Note(NOTE_SEQ[(findNoteIndex(root.getName()) + 12) % 12]); // 12
             //Dim and Aug intervals                                       Semitones from root
-            dim2 = new Note(rootNote.getName());                             // 0
+            dim2 = new Note(rootNote.getName());                                    // 0
             Aug1 = new Note(NOTE_SEQ[(findNoteIndex(root.getName()) + 1) % 12]);    // 1
             dim3 = new Note(NOTE_SEQ[(findNoteIndex(root.getName()) + 2) % 12]);    // 2
             Aug2 = new Note(NOTE_SEQ[(findNoteIndex(root.getName()) + 3) % 12]);    // 3   
