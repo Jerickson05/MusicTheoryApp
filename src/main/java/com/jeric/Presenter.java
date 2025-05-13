@@ -3,21 +3,23 @@ package com.jeric;
 public class Presenter implements IContract.Presenter
 {
  IContract.View view;
- Factory factory;
+ ScaleFactory scaleFactory;
+ ChordFactory chordFactory;
  StringBuilder chordOutput;
  StringBuilder scaleOutput;
 
     public Presenter(IContract.View aView)
     {
         this.view = aView;
-        this.factory = new Factory();
+        this.scaleFactory = new PentatonicScaleFactory();
+        this.chordFactory = new ChordFactory();
     }
 
     @Override
     public void createChord(String n, String t) 
     {
         chordOutput = new StringBuilder();
-        for (Note note :factory.calcChord(n, t).getNotesInChord())
+        for (Note note : chordFactory.calcChord(n, t).getNotesInChord())
         {
             chordOutput.append(note.getName() + " ");
         }
@@ -28,7 +30,7 @@ public class Presenter implements IContract.Presenter
     public void createScale(String n, String t) 
     {
         scaleOutput = new StringBuilder();
-        for (Note note :factory.calcScale(n, t).getNotesInScale())
+        for (Note note : scaleFactory.calcScale(n, t).getNotesInScale())
         {
             scaleOutput.append(note.getName() + " ");
         }
