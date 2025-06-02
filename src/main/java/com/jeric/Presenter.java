@@ -11,7 +11,7 @@ public class Presenter implements IContract.Presenter
     public Presenter(IContract.View aView)
     {
         this.view = aView;
-        this.scaleFactory = new PentatonicScaleFactory();
+        this.scaleFactory = new HarmonicMinorScaleFactory();
         this.chordFactory = new ChordFactory();
     }
 
